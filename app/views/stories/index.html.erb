@@ -1,0 +1,17 @@
+<div class="stories">
+  <% @stories.each do |story| %>
+    <div class="story">
+      <div class="story-header">
+        <div class="story-title"><%= story.title %></div>
+      </div>
+      <div class="story-content">
+        <div class="story-description"><%= story.description %></div>
+        <div class="story-image"><%= image_tag(story.smallimage, class: 'story-image') %></div>
+      </div>
+      <div class="story-footer">
+        <div class="story-author"><%= story.author %></div>
+      </div>
+    </div>
+    <hr/>
+  <% end %>
+</div>

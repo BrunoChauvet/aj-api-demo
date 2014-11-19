@@ -1,0 +1,37 @@
+// Place all the styles related to the stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.stories {
+	
+}
+
+.story {
+	height: 300px;
+}
+
+.story-header {
+	height: 30px;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.story-content {
+	height: 250px;
+}
+
+.story-footer {
+	height: 20px;
+	font-size: 0.8em;
+}
+
+.story-description {
+	float: left;
+	width: 300px;
+}
+
+.story-image {
+	float: left;
+	max-height: 250px;
+	height: 250px;
+}
