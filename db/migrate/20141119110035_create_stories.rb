@@ -15,5 +15,15 @@ class CreateStories < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index(:stories, :guid, :unique => true)
+
+    create_table :meta_values do |t|
+      t.belongs_to :story
+      t.text :meta_type
+      t.text :meta_value
+    end
+    add_foreign_key(:meta_values, :stories)
+    add_index(:meta_values, :story_id, :unique => false)
+
   end
 end

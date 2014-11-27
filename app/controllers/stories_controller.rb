@@ -4,8 +4,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    # @stories = Story.all
-    @stories = Aljazeera::ApiClient.new.fetch_stories
+    @stories = Story.all
   end
 
   # GET /stories/1

@@ -12,6 +12,9 @@ module AjFeedReader
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # Load all subdirectories in models directory
+    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
+
     # Load all libraries in lib directory
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 

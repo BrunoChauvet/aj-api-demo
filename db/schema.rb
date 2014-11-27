@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20141119110035) do
 
+  create_table "meta_values", force: true do |t|
+    t.integer "story_id"
+    t.text    "meta_type"
+    t.text    "meta_value"
+  end
+
+  add_index "meta_values", ["story_id"], name: "index_meta_values_on_story_id"
+
   create_table "stories", force: true do |t|
     t.text     "guid"
     t.text     "link"
@@ -28,5 +36,7 @@ ActiveRecord::Schema.define(version: 20141119110035) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "stories", ["guid"], name: "index_stories_on_guid", unique: true
 
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'fetch_stories' => 'fetch_stories#index'
   resources :stories
 
   # The priority is based upon order of creation: first created -> highest priority.
